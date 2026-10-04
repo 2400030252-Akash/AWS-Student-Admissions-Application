@@ -1,0 +1,14 @@
+{
+  "name": "aurora-admissions-project",
+  "version": "1.0.0",
+  "description": "Aurora Serverless v2 for a Variable-Load Application - Student Admissions Portal",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "generate:data": "node scripts/generate-test-data.js",
+    "test": "node --test backend/tests/api.test.js",
+    "db:setup": "docker compose up -d postgres",
+    "db:reset": "docker compose down -v && docker compose up -d postgres"
+  }
+}
